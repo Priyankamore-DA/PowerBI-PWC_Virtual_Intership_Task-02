@@ -1,41 +1,41 @@
-PWC-Switzerland-PowerBI-virtual-case Task 1
+# PWC-Switzerland-PowerBI-virtual-case
 
-Task 1 - Call Centre Trends
+## Task 1-Call Centre Trends
 
 
 Visualizing customer and agent behavior
 Create a dashboard in Power BI for Call Centre Manager that reflects all relevant Key Performance Indicators (KPIs) and metrics in the dataset. 
 
 
-Table of Contents:
+### Table of Contents:
 
-	Problem Statement
+#### 	Problem Statement
 
-	Flow of work-:
+#### 	Flow of work-:
              
-             Step 1- Upload Data
+Step 1- Upload Data
              
-             Step 2-Cleaning data
+Step 2-Cleaning data
             
-            Step 3-Transform data
+Step 3-Transform data
              
-             Step 4-Load data 
+Step 4-Load data 
 
-	Data Preparation
-             Data Modelling
-             Writing DAX 
+#### 	Data Preparation
+Data Modelling
+Writing DAX 
 
-	Data Visualization
+#### 	Data Visualization
 
-	Data Analysis
+#### 	Data Analysis
 
-	Insights
+#### 	Insights
 
-	Shareable link
+#### 	Shareable link
 
-Problem Statement
+#### Problem Statement
 
-The purpose of this analysis is to create a dashboard in Power BI for call canter manager that reflects all relevant Key Performance Indicators (KPIs) and metrics in the dataset. Get creative!
+The purpose of this analysis is to create a dashboard in PowerBI for call canter manager that reflects all relevant Key Performance Indicators (KPIs) and metrics in the dataset. Get creative!
 
 Possible KPIs include (but are not limited to):
 
@@ -50,37 +50,52 @@ Possible KPIs include (but are not limited to):
 •	Agents performance quadrant -> average handle time(talk duration) vs calls answered
 
 
-Flow of work
+#### Flow of work
 
-Step 1- Upload Data
+##### Step 1- Upload Data
 
-The Dataset used for this analysis was presented by PWC_Switzerland and available at:
+The Dataset used for this analysis was presented by PWC_Switzerland and available at their official website page - [Dataset_link]
 
-Step 2-Cleaning data
-Data transformation was done in Power Query and the dataset was loaded into Microsoft Power BI Desktop for modelling.
-The call canter dataset is given by a table named:
+##### Step 2-Cleaning data
+
+Data transformation was done in Power Query and the dataset was loaded into Microsoft Power BI Desktop for modelling.The call canter dataset is given by a table named:
+
 •	Call Center which has 10 columns and 5000 rows of observation
+
 The tabulation below shows the Call center table with its column names and their description:
 
-Column Name	Description
-Call Id	Represents every unique observation in the dataset
-Agent	Describes the name of the agent
-Date	Describes the date of the call
-Time	Represents the time of the call
-Topic	Describes the topic of the caller
-Answered (Y/N)	Describes if the call was Answered or not
-Resolved	Describes if the problem was Resolved or not
-Speed of answer in seconds	Represents the speed of answer in seconds
-AvgTalkDuration	Represents the average talk duration of call
-Satisfaction rating	Represents the satisfaction rating of the agent during the call
 
-Step 3-Transform data
+ |Column Name	                  | Description |
+ 
+ |--- | ---|
+
+ |Call Id   	                  |Represents every unique observation in the dataset|
+ 
+ |Agent	                        |Describes the name of the agent|
+ 
+ | Date     	                  |Describes the date of the call|
+ 
+ | Time	                        |Represents the time of the call|
+ 
+ | Topic                        |Describes the topic of the caller|
+
+ | Answered                     |(Y/N)	Describes if the call was Answered or not|
+
+ | Resolved	                    |Describes if the problem was Resolved or not|
+
+ | Speed of answer(in seconds)	|Represents the speed of answer in seconds|
+
+ | AvgTalkDuration              |	Represents the average talk duration of call|
+
+ | Satisfaction rating	        |Represents the satisfaction rating of the agent during the call|
+
+##### Step 3-Transform data
 Data Cleaning and transformation for the dataset were done in power query as follows:
 •	Unnecessary columns were removed
 •	Each of the columns in the table was validated to have the correct data type
 •	Unnecessary rows were removed
-Data preparation: -
-Data Modelling
+#### Data preparation: -
+##### Data Modelling
 After the dataset was cleaned and transformed, it was ready to be modelled.
 •	The official dataset is marked as the FACT table in the dataset.
 •	A separate Agent Table is created by using the DAX function-
@@ -89,11 +104,11 @@ Agent table = DISTINCT ('Fact Table'[Agent])
         Topics = DISTINCT ('Fact Table'[Topic])
 •	Along with this, a separate table- All Measuress is created to store all the measures which we have used in this model.
 
-Data Visualization
+##### Data Visualization
 Data visualization for the datasets was done in Microsoft Power BI Desktop:
 •	The Call Center Manager Page: Shows KPIs including overall customer satisfaction, overall calls answered/abandoned, calls by time, average speed of answer, agents performance quadrant -> average handle time(talk duration) vs calls answered
 
-Data Analysis
+#### Data Analysis
 Measures used in visualization are:
 •	Answered_call = CALCULATE(COUNT('Fact Table'[Call Id]),FILTER('Fact Table','Fact Table'[Answered (Y/N)]="Y"))
 •	Resolved count = CALCULATE(COUNT('Fact Table'[Call Id]),'Fact Table'[Resolved]="Y")
@@ -113,7 +128,7 @@ Measures used in visualization are:
 •	Total_calls = COUNTROWS('Fact Table')
 •	Unreolved count = CALCULATE(COUNT('Fact Table'[Resolved]),'Fact Table'[Resolved]="N")
 
-Insights
+#### Insights
 As shown by Data Visualization, It can be deduced that:
 •	The average satisfaction rating is 3.40
 •	81.08% of total calls were answered and 18.92% of total calls were not answered
@@ -123,7 +138,7 @@ As shown by Data Visualization, It can be deduced that:
 
 
 
-Dashboard image
+#### Dashboard image
 
 
 
