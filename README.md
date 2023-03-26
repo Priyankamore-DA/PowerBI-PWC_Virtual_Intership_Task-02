@@ -65,19 +65,18 @@ Data transformation was done in Power Query and the dataset was loaded into Micr
 The tabulation below shows the Call center table with its column names and their description:
 
 
- |Column Name	                  | Description |
- 
- |--- | ---|
+ |Column Name	| Description |
+ | --- |---|
 
- |Call Id   	                  |Represents every unique observation in the dataset|
+ |Call Id  | 	                  Represents every unique observation in the dataset|
  
- |Agent	                        |Describes the name of the agent|
+ |Agent	|                        Describes the name of the agent|
  
- | Date     	                  |Describes the date of the call|
+ | Date |    	                  Describes the date of the call|
  
- | Time	                        |Represents the time of the call|
+ | Time |	                        Represents the time of the call|
  
- | Topic                        |Describes the topic of the caller|
+ | Topic |                       Describes the topic of the caller|
 
  | Answered                     |(Y/N)	Describes if the call was Answered or not|
 
@@ -139,8 +138,6 @@ As shown by Data Visualization, It can be deduced that:
 
 
 #### Dashboard image
-
-
 
 Shareable Link
 You can interact with the dashboard here:
