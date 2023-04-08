@@ -1,6 +1,6 @@
 # PWC-Switzerland-PowerBI-virtual-case
 
-## Task 1-Call Centre Trends
+## Task 2-Call Centre Trends
 
 
 Visualizing customer and agent behavior
